@@ -1,10 +1,21 @@
 
-{% extends 'index.html'%}
+{% extends 'layout.html'%}
 {% block form %}
 <form method="POST">
-  Emri: <input name="emri">
-  <button type="submit">
-    Submit
-  </button>
+    Emri: <input name="emri" value=""><br />
+    Emri ndermarrjes: <input name="emri_ndermarrjes" value=""><br />
+    Nr. Regjistrimit: <input name="nr_regjistrimit" value=""><br />
+    Adresa: <input name="adresa" value=""><br />
+    Personi Kontaktues <input name="personi_kontaktues" value=""><br />
+    Telefoni <input name="telefoni" value=""><br />
+
+    Email <input name="email" value=""><br />
+    <button type="submit">
+        Submit
+    </button>
 </form>
+{% if mesazhi %}
+  <h2>{{ mesazhi }}</>
+{% endif %}
+
 {% endblock form %}
