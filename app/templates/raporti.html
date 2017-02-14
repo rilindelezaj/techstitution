@@ -1,5 +1,48 @@
 {% extends 'layout.html'%}
 {% block form %}
-  Emri: <h3>{{ report['nderrmarja']['emri'] }}</h3>
-  <h3>{{ report }}</h3>
+
+
+  <div class="container">
+    <br><br>
+    <h1 class="header center orange-text">{{ report['nderrmarja']['emri'] }}</h1>
+
+  <ul>
+
+  <li>
+    <div class="row center">
+      <div class="col s6 right-align">Personi kontaktues:</div>
+      <div class="col s6 left-align"><u>{{ report['nderrmarja']['personi_kontaktues'] }}</u></div>
+    </div>
+  	</li>
+    <li>
+      <div class="row center">
+        <div class="col s6 right-align">Numri Regjistrimi:</div>
+        <div class="col s6 left-align"><u>{{ report['nderrmarja']['numri_regjistrimi'] }}</u></div>
+      </div>
+      </li>
+      <li>
+        <div class="row center">
+          <div class="col s6 right-align">Adresa:</div>
+          <div class="col s6 left-align"><u>{{ report['nderrmarja']['adresa'] }}</u></div>
+        </div>
+      	</li>
+        <li>
+          <div class="row center">
+            <div class="col s6 right-align">Telefoni:</div>
+            <div class="col s6 left-align"><u>{{ report['nderrmarja']['telefoni'] }}</u></div>
+          </div>
+        	</li>
+          <li>
+            <div class="row center">
+              <div class="col s6 right-align">Email:</div>
+              <div class="col s6 left-align"><u>{{ report['nderrmarja']['email'] }}</u></div>
+            </div>
+          	</li>
+
+
+
+  </ul>
+
+
+</div>
 {% endblock form %}

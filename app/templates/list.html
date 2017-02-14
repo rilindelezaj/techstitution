@@ -1,0 +1,45 @@
+{% extends 'layout.html'%}
+{% block form %}
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+
+    $('.remove').click(function(event){
+
+      event.preventDefault();
+
+      var url = this.href;
+
+      $.post(url);
+
+    });
+
+  });
+
+</script>
+
+<div class="container">
+  <table>
+         <thead>
+           <tr>
+               <th data-field="id">Nderrmarja</th>
+               <th data-field="name">Email</th>
+               <th data-field="price">Fshi/View</th>
+           </tr>
+         </thead>
+
+         <tbody>
+           {% for report in rekordet %}
+           <tr>
+             <td>{{ report['nderrmarja']['emri'] }}</td>
+             <td>{{ report['nderrmarja']['email'] }}</td>
+             <td><a href="{{ url_for('main.remove',remove_id=report._id)}}">DELEte</a> | <a href="{{ url_for('main.raporti',report_id=report._id)}}">View </a> </td>
+           </tr>
+           {% endfor %}
+         </tbody>
+       </table>
+
+
+</div>
+{% endblock form %}

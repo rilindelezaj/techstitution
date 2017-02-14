@@ -7,7 +7,7 @@ mod_main = Blueprint('main', __name__)
 @mod_main.route('/')
 def index():
 
-	return render_template("index.html")
+	return render_template("layout.html")
 
 @mod_main.route('/form', methods=['GET','POST'])
 def form():
@@ -36,7 +36,9 @@ def form():
 
 @mod_main.route('/list', methods=['GET'])
 def list():
-	return render_template('list.html')
+    db = mongo.db.arkep
+    rekordet = db.find()
+    return render_template('list.html', rekordet=rekordet)
 
 @mod_main.route('/remove', methods=['POST'])
 def remove():

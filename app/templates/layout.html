@@ -1,11 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="//code.jquery.com/jquery-3.1.1.min.js"></script>
   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}">
+  <!-- Compiled and minified CSS -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!-- Compiled and minified JavaScript -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
     <title>Techstitution</title>
 </head>
-<p> Kjo eshte index faqja </p>
 <body>
+
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">ARKEP</a>
+</div>
+</nav>
+
+
 {% block form%}
 {% endblock form%}
 </body>
