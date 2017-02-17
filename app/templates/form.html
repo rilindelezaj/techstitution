@@ -1,169 +1,468 @@
-
-{% extends 'layout.html'%}
-{% block form %}
+{% extends 'layout.html'%} {% block form %}
 <div class="container" style="padding-top:75px">
 
 
-    <ul class="collapsible popout" data-collapsible="accordion">
-      <li>
-        <div class="collapsible-header"><i class="material-icons">perm_identity</i>Informata Gjenerale</div>
-        <div class="collapsible-body"><span>
-          <form method="POST">
-              Emri: <input name="emri" value=""><br />
-              Emri ndermarrjes: <input name="emri_ndermarrjes" value=""><br />
-              Nr. Regjistrimit: <input name="nr_regjistrimit" value=""><br />
-              Adresa: <input name="adresa" value=""><br />
-              Personi Kontaktues <input name="personi_kontaktues" value=""><br />
-              Telefoni <input name="telefoni" value=""><br />
-
-              Email <input name="email" value=""><br />
-              <button type="submit">
-                  Submit
-              </button>
-              </form>
-        </span></div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons">games</i>Informata tjera</div>
-        <div class="collapsible-body"><span>
-              <div class="row">
-                  <div class="col s12">
-                      <div class="row">
-                          <div class="col s6">
-          Emri i Kompanise:
-                  <div class="input-field inline">
-            <input disabled value="Amiri SHPK" id="emri_kompanise" type="text"  class="validate">
-          </div>
-        </div>
-
-        <div class="col s6">
-Emri i Kompanise:
-<div class="input-field inline">
-<input disabled value="Amiri SHPK" id="emri_kompanise" type="text"  class="validate">
-</div>
-</div>
-      </div>
+  <div class="row center">
+       <a class=" header center waves-effect waves-light btn-large ">
+          <h6> PYETËSORI PËR OFRUESIT E SHËRBIMEVE TË TELEFONISË MOBILE</h6>
+       </a>
+       <div class=" header center  card-panel indigo lighten-4">
+          <span class="text-grey darken-4">
+          Tremujori i ___i vitit ______<br>
+          (Periudha prej dd/mm/vvvv deri dd/mm/vvvv )
+          </span>
+       </div>
     </div>
-      </div>
 
 
-                    <div class="row">
-                    <form class="col s12">
-                    <div class="row">
-                    <div class="input-field col s6">
-                      <input id="first_name" type="text" class="validate">
-                      <label for="first_name">Emri i Kompanise</label>
 
+<!--  ******************FORMA KOMPLET****************************************************************
+***************************************************************************************** -->
+
+<ul class="collapsible popout" data-collapsible="accordion">
+  <li>
+        <div class="collapsible-header"><i class="material-icons">perm_identity</i>Të dhënat për ndërmarrjen</div>
+        <div class="collapsible-body">
+          <span>
+                <form>
+                        <div class="row">
+                          <div class="col s12">
+                          <div class="row">
+                            <div class="input-field col s6">
+                              <input id="emri_ndermarrjes" type="text" class="validate">
+                              <label for="emri_ndermarrjes">Emri i Ndermarrjes</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="nr_regjistrimit" type="text" class="validate">
+                              <label for="nr_regjistrimit">Numri i Regjistrimit te biznesit</label>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="input-field col s6">
+                              <input id="adresa" type="text" class="validate">
+                              <label for="adresa">Adresa e Ndermarrjes</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="personi_kontaktues" type="text" class="validate">
+                              <label for="personi_kontaktues">Personi Kontaktues</label>
+                            </div>
+                          </div>
+
+                          <div class="row">
+                            <div class="input-field col s6">
+                              <input id="telefoni" type="text" class="validate">
+                              <label for="telefoni">Telefoni</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="email_adresa" type="text" class="validate">
+                              <label for="email_adresa">Email Adresa</label>
+                            </div>
+                          </div>
+                        </div>
                     </div>
-                    <div class="input-field col s6">
-                    <input id="last_name" type="number" class="validate">
-                    <label for="last_name">Numri i Kompanise</label>
-                    </div>
-                    </div>
-                  </div>
-
-
-
-                  <div class="row">
-                  <form class="col s12">
-                  <div class="row">
-                  <div class="input-field offset-s8 col s4">
-                    <input id="first_name" type="text" class="validate">
-                    <label for="first_name">Emri i Kompanise</label>
-
-                  </div>
-
-
-                  </div>
-                </div>
-                 <div class="divider"></div>
-                 <div class="row">
-                 <form class="col s12">
-                 <div class="row">
-                 <div class="input-field  col s12">
-                   <input id="first_name" type="text" class="validate">
-                   <label for="first_name">Emri i Kompanise</label>
-
-                 </div>
-
-
-                 </div>
-                 </div>
-
-        </span></div>
-      </li>
-      <li>
-        <div class="collapsible-header"><i class="material-icons">whatshot</i>Treshi</div>
-        <div class="collapsible-body"><span>
-
-          <ul class="collapsible" data-collapsible="accordion">
-              <li>
-                <div class="collapsible-header"><i class="material-icons">filter_drama</i>Mbelueshmeria </div>
-                <div class="collapsible-body"><span>
-                  SHËNIM: Me Përdorues aktiv mobil nënkuptojmë:
-                  I) Prepaid, është çdo përdorues i cili e ka përdorur njërin nga shërbimet telekomunikuese me pagese apo ka mbushur llogarinë e tyre brenda periudhës tremujore (3).
-                  II) Postpaid, është çdo përdorues i cili ka kontratë valide me ofruesin e shërbimeve të telefonisë mobile.
-                  <div class="row">
-                  <form class="col s12">
-                  <div class="row">
-                  <div class="input-field col s6">
-                    <input id="first_name" type="text" class="validate">
-                    <label for="first_name">Emri i Kompanise</label>
-
-                  </div>
-                  <div class="input-field col s6">
-                  <input id="last_name" type="number" class="validate">
-                  <label for="last_name">Numri i Kompanise</label>
-                  </div>
-                  </div>
                 </form>
-                  </div>
+          </span>
+        </div>
+  </li>
+
+
+<!-- ******************************************************************************************* -->
+       <li>
+           <div class="collapsible-header"><i class="material-icons">perm_scan_wifi</i>Infrastruktura e rrjetit</div>
+           <div class="collapsible-body">
+           <span>
+             SHËNIM: Ju lutem vendosni të dhënat dhe infomracionin për periudhën që këkohet në formatin e tabelave më poshtë.
+             Inofrmacionet financiare  të jepet në Euro pa përfshirë TVSH-në përveç në pjesën e tarifave me pakicë.
+
+
+           <ul class="collapsible" data-collapsible="accordion">
+                 <li>
+                   <div class="collapsible-header"><i class="material-icons">filter_drama</i>Mbelueshmeria </div>
+                   <div class="collapsible-body">
+                     <span>
+                      <div class="row">
+                          <div class="col s12 center">
+
+                              <b> Mbulueshmëria e popullësisë (%)</b>
+                                  </div>
+                                  </div>
+                        <div class="row">
+                            <div class="input-field col s2">
+                              <input id="last_name" type="number" class="validate">
+                              <label for="last_name">GSM</label>
+                            </div>
+                              <div class="input-field col s2">
+                                <input id="last_name" type="number" class="validate">
+                                <label for="last_name">UMTS</label>
+                              </div>
+                            <div class="input-field col s2">
+                              <input id="last_name" type="number" class="validate">
+                              <label for="last_name">LTE</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="input_text" type="text" data-length="100">
+                              <label for="input_text">Komenti</label>
+                            </div>
+                          </div>
+                    </span>
+                    <div class="divider"></div>
+                    <br>
+                    <span>
+                      <div class="row">
+                          <div class="col s12 center">
+
+                              <b> Mbulueshmëria e territorit (%)</b>
+                                  </div>
+                                  </div>
+                        <div class="row">
+                            <div class="input-field col s2">
+                              <input id="last_name" type="number" class="validate">
+                              <label for="last_name">GSM</label>
+                            </div>
+                            <div class="input-field col s2">
+                              <input id="last_name" type="number" class="validate">
+                              <label for="last_name">UMTS</label>
+                            </div>
+                            <div class="input-field col s2">
+                              <input id="last_name" type="number" class="validate">
+                              <label for="last_name">LTE</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input id="input_text" type="text" data-length="100">
+                              <label for="input_text">Komenti</label>
+                            </div>
+                          </div>
+                    </span>
+                 </div>
+                 </li>
+                       <li>
+                           <div class="collapsible-header"><i class="material-icons">place</i>Elementet e Rrjetit</div>
+                           <div class="collapsible-body"><span>
+                            <div class="row">
+                                <div class="col s12 center">
+                                    <b> Qendrat e centraleve mobile </b>
+                                </div>
+                            </div>
+                              <div class="row">
+                                  <div class="input-field col s2">
+                                    <input id="last_name" type="number" class="validate">
+                                    <label for="last_name">GSM</label>
+                                  </div>
+                                    <div class="input-field col s2">
+                                      <input id="last_name" type="number" class="validate">
+                                      <label for="last_name">UMTS</label>
+                                    </div>
+                                  <div class="input-field col s2">
+                                    <input id="last_name" type="number" class="validate">
+                                    <label for="last_name">LTE</label>
+                                  </div>
+                                  <div class="input-field col s6">
+                                    <input id="input_text" type="text" data-length="100">
+                                    <label for="input_text">Komenti</label>
+                                  </div>
+                              </div>
+                          </span>
+                          <div class="divider"></div>
+                          <br>
+                          <span>
+                            <div class="row">
+                                <div class="col s12 center">
+                                  <b> Portat e qendrave të centraleve mobile </b>
+                                </div>
+                            </div>
+                              <div class="row">
+                                  <div class="input-field col s2">
+                                    <input id="last_name" type="number" class="validate">
+                                    <label for="last_name">GSM</label>
+                                  </div>
+                                  <div class="input-field col s2">
+                                    <input id="last_name" type="number" class="validate">
+                                    <label for="last_name">UMTS</label>
+                                  </div>
+                                  <div class="input-field col s2">
+                                    <input id="last_name" type="number" class="validate">
+                                    <label for="last_name">LTE</label>
+                                  </div>
+                                  <div class="input-field col s6">
+                                    <input id="input_text" type="text" data-length="100">
+                                    <label for="input_text">Komenti</label>
+                                  </div>
+                                </div>
+                          </span>
+                          <span>
+                           <div class="row">
+                               <div class="col s12 center">
+                                   <b> Kontrollues të stacioneve bazë  </b>
+                               </div>
+                           </div>
+                             <div class="row">
+                                 <div class="input-field col s2">
+                                   <input id="last_name" type="number" class="validate">
+                                   <label for="last_name">GSM</label>
+                                 </div>
+                                   <div class="input-field col s2">
+                                     <input id="last_name" type="number" class="validate">
+                                     <label for="last_name">UMTS</label>
+                                   </div>
+                                 <div class="input-field col s2">
+                                   <input id="last_name" type="number" class="validate">
+                                   <label for="last_name">LTE</label>
+                                 </div>
+                                 <div class="input-field col s6">
+                                   <input id="input_text" type="text" data-length="100">
+                                   <label for="input_text">Komenti</label>
+                                 </div>
+                             </div>
+                         </span>
+                         <div class="divider"></div>
+                         <br>
+                         <span>
+                           <div class="row">
+                               <div class="col s12 center">
+                                 <b> Stacionet bazë  </b>
+                               </div>
+                           </div>
+                             <div class="row">
+                                 <div class="input-field col s2">
+                                   <input id="last_name" type="number" class="validate">
+                                   <label for="last_name">GSM</label>
+                                 </div>
+                                 <div class="input-field col s2">
+                                   <input id="last_name" type="number" class="validate">
+                                   <label for="last_name">UMTS</label>
+                                 </div>
+                                 <div class="input-field col s2">
+                                   <input id="last_name" type="number" class="validate">
+                                   <label for="last_name">LTE</label>
+                                 </div>
+                                 <div class="input-field col s6">
+                                   <input id="input_text" type="text" data-length="100">
+                                   <label for="input_text">Komenti</label>
+                                 </div>
+                               </div>
+                         </span>
+
+
+                        </div>
+                       </li>
+                       <li>
+                           <div class="collapsible-header"><i class="material-icons">whatshot</i>Kapaciteti</div>
+                           <div class="collapsible-body">
+                             <span>
+                               <div class="row">
+                                   <div class="col s12 center">
+                                     <b> Kapaciteti total në rrjetin tuaj </b>
+                                   </div>
+                               </div>
+                                 <div class="row">
+                                     <div class="input-field col s2">
+                                       <input id="last_name" type="number" class="validate">
+                                       <label for="last_name">GSM</label>
+                                     </div>
+                                     <div class="input-field col s2">
+                                       <input id="last_name" type="number" class="validate">
+                                       <label for="last_name">UMTS</label>
+                                     </div>
+                                     <div class="input-field col s2">
+                                       <input id="last_name" type="number" class="validate">
+                                       <label for="last_name">LTE</label>
+                                     </div>
+                                     <div class="input-field col s6">
+                                       <input id="input_text" type="text" data-length="100">
+                                       <label for="input_text">Komenti</label>
+                                     </div>
+                                   </div>
+                             </span>
+                             <span>
+                              <div class="row">
+                                  <div class="col s12 center">
+                                      <b> Trafiku në Peak </b>
+                                  </div>
+                              </div>
+                                <div class="row">
+                                    <div class="input-field col s2">
+                                      <input id="last_name" type="number" class="validate">
+                                      <label for="last_name">GSM</label>
+                                    </div>
+                                      <div class="input-field col s2">
+                                        <input id="last_name" type="number" class="validate">
+                                        <label for="last_name">UMTS</label>
+                                      </div>
+                                    <div class="input-field col s2">
+                                      <input id="last_name" type="number" class="validate">
+                                      <label for="last_name">LTE</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                      <input id="input_text" type="text" data-length="100">
+                                      <label for="input_text">Komenti</label>
+                                    </div>
+                                </div>
+                            </span>
+                            <div class="divider"></div>
+                            <br>
+                            <span>
+                              <div class="row">
+                                  <div class="col s12 center">
+                                    <b> Trafiku në Off-Peak  </b>
+                                  </div>
+                              </div>
+                                <div class="row">
+                                    <div class="input-field col s2">
+                                      <input id="last_name" type="number" class="validate">
+                                      <label for="last_name">GSM</label>
+                                    </div>
+                                    <div class="input-field col s2">
+                                      <input id="last_name" type="number" class="validate">
+                                      <label for="last_name">UMTS</label>
+                                    </div>
+                                    <div class="input-field col s2">
+                                      <input id="last_name" type="number" class="validate">
+                                      <label for="last_name">LTE</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                      <input id="input_text" type="text" data-length="100">
+                                      <label for="input_text">Komenti</label>
+                                    </div>
+                                  </div>
+                            </span>
+                           </div>
+                       </li>
+          </ul>
+        </span>
+        </div>
+     </li>
+
+     <!-- ***************************************************************************************************************
+     *************************************************************************************************************** -->
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">call_received</i>Trafiku dhe të hyrat nga origjinimi i thirrjeve (Outgoing)</div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">message</i>Trafiku dhe të hyrat nga origjinimi i SMS dhe MMS (Outgoing)</div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">call_missed</i>Trafiku në ardhje/i terminuar i thirrjeve (Incoming)</div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">call_merge</i>Trafiku dhe të hyrat nga Roamingu</div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">perm_data_setting</i>Trafiku i të dhënave Data </div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">payment</i>Tarifat me parapagim (Pre-paid) </div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">receipt</i>Tarifat me Kontratë (Post-paid) </div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">call_merge</i>Tarifat e Roamingut të përdoruesve me parapagim (Pre-paid) </div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">call_merge</i>Tarifat e Roamingut të përdoruesve me Kontratë (Post-paid) </div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">shopping_cart</i>Fitimi para tatimit për vitin paraparka  </div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">store</i> Të dhënat tjera financiare (€) </div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">info_outline</i>Marrëveshjet e Interkoneksionit </div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">group_work</i>Të dhënat mbi numrin e punëtorëve </div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">whatshot</i>PER QEF QITA :D</div>
+       <div class="collapsible-body"><span>Ne process e siper</span></div>
+    </li>
+
+    <!-- ***************************************************************************************************************
+    *************************************************************************************************************** -->
 
 
 
-                </span></div>
-              </li>
-              <li>
-                <div class="collapsible-header"><i class="material-icons">place</i>Elementet e Rrjetit</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-              </li>
-              <li>
-                <div class="collapsible-header"><i class="material-icons">whatshot</i>Kapaciteti</div>
-                <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-              </li>
-            </ul>
 
 
-
-
-
-        </span></div>
-      </li>
-
-      <li>
-        <div class="collapsible-header"><i class="material-icons">whatshot</i>4shi</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-      </li>
-
-      <li>
-        <div class="collapsible-header"><i class="material-icons">whatshot</i>5shi</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-      </li>
-
-      <li>
-        <div class="collapsible-header"><i class="material-icons">whatshot</i>6shqi</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-      </li>
-
-      <li>
-        <div class="collapsible-header"><i class="material-icons">whatshot</i>7shqi</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-      </li>
-    </ul>
+<!-- *************************UL KRYESORE  perfudni qisaj mos me fshi*************ju lutem******** -->
+</ul>
+<!-- ***************************************************************************************
+***********PERFUNDIMI I FORMES******************************************************** -->
 
 </div>
 {% if mesazhi %}
-  <h2>{{ mesazhi }}</>
+<h2>{{ mesazhi }}</>
 {% endif %}
 
 {% endblock form %}
