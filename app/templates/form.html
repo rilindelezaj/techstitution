@@ -1,67 +1,54 @@
 {% extends 'layout.html'%} {% block form %}
-<div class="container" style="padding-top:75px">
-
-
-  <div class="row center">
-       <a class=" header center waves-effect waves-light btn-large ">
-          <h6> PYETËSORI PËR OFRUESIT E SHËRBIMEVE TË TELEFONISË MOBILE</h6>
-       </a>
-       <div class=" header center  card-panel indigo lighten-4">
-          <span class="text-grey darken-4">
-          Tremujori i ___i vitit ______<br>
-          (Periudha prej dd/mm/vvvv deri dd/mm/vvvv )
-          </span>
-       </div>
-    </div>
+<div class="container" style="padding-top:5px">
 
 
 
 <!--  ******************FORMA KOMPLET****************************************************************
 ***************************************************************************************** -->
-
+<form method="POST">
 <ul class="collapsible popout" data-collapsible="accordion">
   <li>
         <div class="collapsible-header"><i class="material-icons">perm_identity</i>Të dhënat për ndërmarrjen</div>
         <div class="collapsible-body">
           <span>
-                <form>
+
                         <div class="row">
                           <div class="col s12">
                           <div class="row">
                             <div class="input-field col s6">
-                              <input id="emri_ndermarrjes" type="text" class="validate">
+                              <input name="emri_ndermarrjes" type="text" class="validate">
                               <label for="emri_ndermarrjes">Emri i Ndermarrjes</label>
                             </div>
                             <div class="input-field col s6">
-                              <input id="nr_regjistrimit" type="text" class="validate">
+                              <input name="nr_regjistrimit" type="text" class="validate">
                               <label for="nr_regjistrimit">Numri i Regjistrimit te biznesit</label>
                             </div>
                           </div>
 
                           <div class="row">
                             <div class="input-field col s6">
-                              <input id="adresa" type="text" class="validate">
+                              <input name="adresa" type="text" class="validate">
                               <label for="adresa">Adresa e Ndermarrjes</label>
                             </div>
                             <div class="input-field col s6">
-                              <input id="personi_kontaktues" type="text" class="validate">
+                              <input name="personi_kontaktues" type="text" class="validate">
                               <label for="personi_kontaktues">Personi Kontaktues</label>
                             </div>
                           </div>
 
                           <div class="row">
                             <div class="input-field col s6">
-                              <input id="telefoni" type="text" class="validate">
+                              <input name="telefoni" type="text" class="validate">
                               <label for="telefoni">Telefoni</label>
                             </div>
                             <div class="input-field col s6">
-                              <input id="email_adresa" type="text" class="validate">
+                              <input name="email_adresa" type="text" class="validate">
                               <label for="email_adresa">Email Adresa</label>
                             </div>
                           </div>
                         </div>
                     </div>
-                </form>
+
           </span>
         </div>
   </li>
@@ -78,7 +65,7 @@
 
            <ul class="collapsible" data-collapsible="accordion">
                  <li>
-                   <div class="collapsible-header"><i class="material-icons">filter_drama</i>Mbelueshmeria </div>
+                   <div class="collapsible-header"><i class="material-icons">play_arrow</i>Mbelueshmeria </div>
                    <div class="collapsible-body">
                      <span>
                       <div class="row">
@@ -89,20 +76,20 @@
                                   </div>
                         <div class="row">
                             <div class="input-field col s2">
-                              <input id="last_name" type="number" class="validate">
-                              <label for="last_name">GSM</label>
+                              <input name="mbulushmeria_popullsise_gsm" type="number" class="validate">
+                              <label for="mbulushmeria_popullsise_gsm">GSM</label>
                             </div>
                               <div class="input-field col s2">
-                                <input id="last_name" type="number" class="validate">
-                                <label for="last_name">UMTS</label>
+                                <input name="mbulushmeria_popullsise_umts" type="number" class="validate">
+                                <label for="mbulushmeria_popullsise_umts">UMTS</label>
                               </div>
                             <div class="input-field col s2">
-                              <input id="last_name" type="number" class="validate">
-                              <label for="last_name">LTE</label>
+                              <input name="mbulushmeria_popullsise_lte" type="number" class="validate">
+                              <label for="mbulushmeria_popullsise_lte">LTE</label>
                             </div>
                             <div class="input-field col s6">
-                              <input id="input_text" type="text" data-length="100">
-                              <label for="input_text">Komenti</label>
+                              <input name="mbulushmeria_popullsise_komenti" type="text" data-length="100">
+                              <label for="mbulushmeria_popullsise_komenti">Komenti</label>
                             </div>
                           </div>
                     </span>
@@ -117,27 +104,27 @@
                                   </div>
                         <div class="row">
                             <div class="input-field col s2">
-                              <input id="last_name" type="number" class="validate">
-                              <label for="last_name">GSM</label>
+                              <input name="mbulushmeria_territorit_gsm" type="number" class="validate">
+                              <label for="mbulushmeria_territorit_gsm">GSM</label>
                             </div>
                             <div class="input-field col s2">
-                              <input id="last_name" type="number" class="validate">
-                              <label for="last_name">UMTS</label>
+                              <input name="mbulushmeria_territorit_umts" type="number" class="validate">
+                              <label for="mbulushmeria_territorit_umts">UMTS</label>
                             </div>
                             <div class="input-field col s2">
-                              <input id="last_name" type="number" class="validate">
-                              <label for="last_name">LTE</label>
+                              <input name="mbulushmeria_territorit_lte" type="number" class="validate">
+                              <label for="mbulushmeria_territorit_lte">LTE</label>
                             </div>
                             <div class="input-field col s6">
-                              <input id="input_text" type="text" data-length="100">
-                              <label for="input_text">Komenti</label>
+                              <input name="mbulushmeria_territorit_komenti" type="text" data-length="100">
+                              <label for="mbulushmeria_territorit_komenti">Komenti</label>
                             </div>
                           </div>
                     </span>
                  </div>
                  </li>
                        <li>
-                           <div class="collapsible-header"><i class="material-icons">place</i>Elementet e Rrjetit</div>
+                           <div class="collapsible-header"><i class="material-icons">play_arrow</i>Elementet e Rrjetit</div>
                            <div class="collapsible-body"><span>
                             <div class="row">
                                 <div class="col s12 center">
@@ -146,20 +133,20 @@
                             </div>
                               <div class="row">
                                   <div class="input-field col s2">
-                                    <input id="last_name" type="number" class="validate">
-                                    <label for="last_name">GSM</label>
+                                    <input name="qendrat_centrale_mobile_gsm" type="number" class="validate">
+                                    <label for="qendrat_centrale_mobile_gsm">GSM</label>
                                   </div>
                                     <div class="input-field col s2">
-                                      <input id="last_name" type="number" class="validate">
-                                      <label for="last_name">UMTS</label>
+                                      <input name="qendrat_centrale_mobile_umts" type="number" class="validate">
+                                      <label for="qendrat_centrale_mobile_ummts">UMTS</label>
                                     </div>
                                   <div class="input-field col s2">
-                                    <input id="last_name" type="number" class="validate">
-                                    <label for="last_name">LTE</label>
+                                    <input name="qendrat_centrale_mobile_lte" type="number" class="validate">
+                                    <label for="qendrat_centrale_mobile_lte">LTE</label>
                                   </div>
                                   <div class="input-field col s6">
-                                    <input id="input_text" type="text" data-length="100">
-                                    <label for="input_text">Komenti</label>
+                                    <input name="qendrat_centrale_mobile_komenti" type="text" data-length="100">
+                                    <label for="qendrat_centrale_mobile_komenti">Komenti</label>
                                   </div>
                               </div>
                           </span>
@@ -173,20 +160,20 @@
                             </div>
                               <div class="row">
                                   <div class="input-field col s2">
-                                    <input id="last_name" type="number" class="validate">
-                                    <label for="last_name">GSM</label>
+                                    <input name="portat_qendrat_centrale_mobile_gsm" type="number" class="validate">
+                                    <label for="portat_qendrat_centrale_mobile_gsm">GSM</label>
                                   </div>
                                   <div class="input-field col s2">
-                                    <input id="last_name" type="number" class="validate">
-                                    <label for="last_name">UMTS</label>
+                                    <input name="portat_qendrat_centrale_mobile_umts" type="number" class="validate">
+                                    <label for="portat_qendrat_centrale_mobile_umts">UMTS</label>
                                   </div>
                                   <div class="input-field col s2">
-                                    <input id="last_name" type="number" class="validate">
-                                    <label for="last_name">LTE</label>
+                                    <input name="portat_qendrat_centrale_mobile_lte" type="number" class="validate">
+                                    <label for="portat_qendrat_centrale_mobile_lte">LTE</label>
                                   </div>
                                   <div class="input-field col s6">
-                                    <input id="input_text" type="text" data-length="100">
-                                    <label for="input_text">Komenti</label>
+                                    <input name="portat_qendrat_centrale_mobile_komenti" type="text" data-length="100">
+                                    <label for="portat_qendrat_centrale_mobile_komenti">Komenti</label>
                                   </div>
                                 </div>
                           </span>
@@ -198,20 +185,20 @@
                            </div>
                              <div class="row">
                                  <div class="input-field col s2">
-                                   <input id="last_name" type="number" class="validate">
-                                   <label for="last_name">GSM</label>
+                                   <input name="kontrollues_stacion_baz_gsm" type="number" class="validate">
+                                   <label for="kontrollues_stacion_baz_gsm">GSM</label>
                                  </div>
                                    <div class="input-field col s2">
-                                     <input id="last_name" type="number" class="validate">
-                                     <label for="last_name">UMTS</label>
+                                     <input name="kontrollues_stacion_baz_umts" type="number" class="validate">
+                                     <label for="kontrollues_stacion_baz_umts">UMTS</label>
                                    </div>
                                  <div class="input-field col s2">
-                                   <input id="last_name" type="number" class="validate">
-                                   <label for="last_name">LTE</label>
+                                   <input name="kontrollues_stacion_baz_lte" type="number" class="validate">
+                                   <label for="kontrollues_stacion_baz_lte">LTE</label>
                                  </div>
                                  <div class="input-field col s6">
-                                   <input id="input_text" type="text" data-length="100">
-                                   <label for="input_text">Komenti</label>
+                                   <input name="kontrollues_stacion_baz_komenti" type="text" data-length="100">
+                                   <label for="kontrollues_stacion_baz_komenti">Komenti</label>
                                  </div>
                              </div>
                          </span>
@@ -225,20 +212,20 @@
                            </div>
                              <div class="row">
                                  <div class="input-field col s2">
-                                   <input id="last_name" type="number" class="validate">
-                                   <label for="last_name">GSM</label>
+                                   <input name="stacionet_baze_gsm" type="number" class="validate">
+                                   <label for="stacionet_baze_gsm">GSM</label>
                                  </div>
                                  <div class="input-field col s2">
-                                   <input id="last_name" type="number" class="validate">
-                                   <label for="last_name">UMTS</label>
+                                   <input name="stacionet_baze_umts" type="number" class="validate">
+                                   <label for="stacionet_baze_umts">UMTS</label>
                                  </div>
                                  <div class="input-field col s2">
-                                   <input id="last_name" type="number" class="validate">
-                                   <label for="last_name">LTE</label>
+                                   <input name="stacionet_baze_lte" type="number" class="validate">
+                                   <label for="stacionet_baze_lte">LTE</label>
                                  </div>
                                  <div class="input-field col s6">
-                                   <input id="input_text" type="text" data-length="100">
-                                   <label for="input_text">Komenti</label>
+                                   <input name="stacionet_baze_komenti" type="text" data-length="100">
+                                   <label for="stacionet_baze_komenti">Komenti</label>
                                  </div>
                                </div>
                          </span>
@@ -247,7 +234,7 @@
                         </div>
                        </li>
                        <li>
-                           <div class="collapsible-header"><i class="material-icons">whatshot</i>Kapaciteti</div>
+                           <div class="collapsible-header"><i class="material-icons">play_arrow</i>Kapaciteti</div>
                            <div class="collapsible-body">
                              <span>
                                <div class="row">
@@ -257,20 +244,20 @@
                                </div>
                                  <div class="row">
                                      <div class="input-field col s2">
-                                       <input id="last_name" type="number" class="validate">
-                                       <label for="last_name">GSM</label>
+                                       <input name="kapaciteti_total_rrjet_gsm" type="number" class="validate">
+                                       <label for="kapaciteti_total_rrjet_gsm">GSM</label>
                                      </div>
                                      <div class="input-field col s2">
-                                       <input id="last_name" type="number" class="validate">
-                                       <label for="last_name">UMTS</label>
+                                       <input name="kapaciteti_total_rrjet_umts" type="number" class="validate">
+                                       <label for="kapaciteti_total_rrjet_umts">UMTS</label>
                                      </div>
                                      <div class="input-field col s2">
-                                       <input id="last_name" type="number" class="validate">
-                                       <label for="last_name">LTE</label>
+                                       <input name="kapaciteti_total_rrjet_lte" type="number" class="validate">
+                                       <label for="kapaciteti_total_rrjet_lte">LTE</label>
                                      </div>
                                      <div class="input-field col s6">
-                                       <input id="input_text" type="text" data-length="100">
-                                       <label for="input_text">Komenti</label>
+                                       <input name="kapaciteti_total_rrjet_komenti" type="text" data-length="100">
+                                       <label for="kapaciteti_total_rrjet_komenti">Komenti</label>
                                      </div>
                                    </div>
                              </span>
@@ -282,20 +269,20 @@
                               </div>
                                 <div class="row">
                                     <div class="input-field col s2">
-                                      <input id="last_name" type="number" class="validate">
-                                      <label for="last_name">GSM</label>
+                                      <input name="trafiku_peak_gsm" type="number" class="validate">
+                                      <label for="trafiku_peak_gsm">GSM</label>
                                     </div>
                                       <div class="input-field col s2">
-                                        <input id="last_name" type="number" class="validate">
-                                        <label for="last_name">UMTS</label>
+                                        <input name="trafiku_peak_umts" type="number" class="validate">
+                                        <label for="trafiku_peak_umts">UMTS</label>
                                       </div>
                                     <div class="input-field col s2">
-                                      <input id="last_name" type="number" class="validate">
-                                      <label for="last_name">LTE</label>
+                                      <input name="trafiku_peak_lte" type="number" class="validate">
+                                      <label for="trafiku_peak_lte">LTE</label>
                                     </div>
                                     <div class="input-field col s6">
-                                      <input id="input_text" type="text" data-length="100">
-                                      <label for="input_text">Komenti</label>
+                                      <input name="trafiku_peak_komenti" type="text" data-length="100">
+                                      <label for="trafiku_peak_komenti">Komenti</label>
                                     </div>
                                 </div>
                             </span>
@@ -309,20 +296,20 @@
                               </div>
                                 <div class="row">
                                     <div class="input-field col s2">
-                                      <input id="last_name" type="number" class="validate">
-                                      <label for="last_name">GSM</label>
+                                      <input name="trafiku_offpeak_gsm" type="number" class="validate">
+                                      <label for="trafiku_offpeak_gsm">GSM</label>
                                     </div>
                                     <div class="input-field col s2">
-                                      <input id="last_name" type="number" class="validate">
-                                      <label for="last_name">UMTS</label>
+                                      <input name="trafiku_offpeak_umts" type="number" class="validate">
+                                      <label for="trafiku_offpeak_umts">UMTS</label>
                                     </div>
                                     <div class="input-field col s2">
-                                      <input id="last_name" type="number" class="validate">
-                                      <label for="last_name">LTE</label>
+                                      <input name="trafiku_offpeak_lte" type="number" class="validate">
+                                      <label for="trafiku_offpeak_lte">LTE</label>
                                     </div>
                                     <div class="input-field col s6">
-                                      <input id="input_text" type="text" data-length="100">
-                                      <label for="input_text">Komenti</label>
+                                      <input name="trafiku_offpeak_komenti" type="text" data-length="100">
+                                      <label for="trafiku_offpeak_komenti">Komenti</label>
                                     </div>
                                   </div>
                             </span>
@@ -336,12 +323,899 @@
      <!-- ***************************************************************************************************************
      *************************************************************************************************************** -->
 
+
+    <li>
+       <div class="collapsible-header"><i class="material-icons">perm_identity</i>Përdoruesit dhe ndarja e tyre</div>
+       <div class="collapsible-body">
+        <!-- starti i startit         -->
+
+        <span>
+        SHËNIM: Me kapacitet nënkuptohet trafiku total i rrjetit i shprehur në njësinë Erlang
+
+
+        <ul class="collapsible" data-collapsible="accordion">
+          <!-- Nen menu -->
+              <li>
+                <div class="collapsible-header"><i class="material-icons">play_arrow</i>Totali i përdoruesve individual me parapagim dhe kontratë</div>
+                <div class="collapsible-body">
+                  <span>
+                   <div class="row">
+                       <div class="col s12 center">
+
+                           <b>Përdoruesit me parapagim (Prepaid)</b>
+                               </div>
+                               </div>
+                     <div class="row">
+                         <div class="input-field col s3">
+                           <input name="perdoruesit_parapagim_numri" type="number" class="validate">
+                           <label for="perdoruesit_parapagim_numri">Numri i perdoruesve</label>
+                         </div>
+                           <div class="input-field col s3">
+                             <input name="perdoruesit_parapagim_hyrat_000s" type="number" class="validate">
+                             <label for="perdoruesit_parapagim_hyrat_000s">Te hyrat ne '000s</label>
+                           </div>
+                          <div class="input-field col s6">
+                           <input name="perdoruesit_parapagim_komenti" type="text" data-length="100">
+                           <label for="perdoruesit_parapagim_komenti">Komenti</label>
+                          </div>
+                       </div>
+                 </span>
+                 <div class="divider"></div>
+                 <br>
+                 <span>
+                  <div class="row">
+                      <div class="col s12 center">
+
+                          <b>Përdoruesit me kontrate (Postpaid)</b>
+                              </div>
+                              </div>
+                    <div class="row">
+                        <div class="input-field col s3">
+                          <input name="perdoruesit_kontrate_numri" type="number" class="validate">
+                          <label for="perdoruesit_kontrate_numri">Numri i perdoruesve</label>
+                        </div>
+                          <div class="input-field col s3">
+                            <input name="perdoruesit_kontrate_000s" type="number" class="validate">
+                            <label for="perdoruesit_kontrate_000s">Te hyrat ne '000s</label>
+                          </div>
+                         <div class="input-field col s6">
+                          <input name="perdoruesit_kontrate_komenti" type="text" data-length="100">
+                          <label for="perdoruesit_kontrate_komenti">Komenti</label>
+                         </div>
+                      </div>
+                </span>
+              </div>
+              </li>
+              <!-- Nen menu   -->
+              <li>
+                <div class="collapsible-header"><i class="material-icons">play_arrow</i>Totali i përdoruesve në biznese</div>
+                <div class="collapsible-body">
+                  <span>
+                   <div class="row">
+                       <div class="col s12 center">
+
+                           <b>Përdoruesit me parapagim (Prepaid)</b>
+                               </div>
+                               </div>
+                     <div class="row">
+                         <div class="input-field col s3">
+                           <input name="biznes_perdorues_parapagim_numri" type="number" class="validate">
+                           <label for="biznes_perdorues_parapagim_numri">Numri i perdoruesve</label>
+                         </div>
+                           <div class="input-field col s3">
+                             <input name="biznes_perdorues_parapagim_000s" type="number" class="validate">
+                             <label for="biznes_perdorues_parapagim_000s">Te hyrat ne '000s</label>
+                           </div>
+                          <div class="input-field col s6">
+                           <input name="biznes_perdorues_parapagim_komenti" type="text" data-length="100">
+                           <label for="biznes_perdorues_parapagim_komenti">Komenti</label>
+                          </div>
+                       </div>
+                 </span>
+                 <div class="divider"></div>
+                 <br>
+                 <span>
+                  <div class="row">
+                      <div class="col s12 center">
+
+                          <b>Përdoruesit me kontrate (Postpaid)</b>
+                              </div>
+                              </div>
+                    <div class="row">
+                        <div class="input-field col s3">
+                          <input name="biznes_perdorues_kontrate_numri" type="number" class="validate">
+                          <label for="biznes_perdorues_kontrate_numri">Numri i perdoruesve</label>
+                        </div>
+                          <div class="input-field col s3">
+                            <input name="biznes_perdorues_kontrate_000s" type="number" class="validate">
+                            <label for="biznes_perdorues_kontrate_000s">Te hyrat ne '000s</label>
+                          </div>
+                         <div class="input-field col s6">
+                          <input name="biznes_perdorues_kontrate_komenti" type="text" data-length="100">
+                          <label for="biznes_perdorues_kontrate_komenti">Komenti</label>
+                         </div>
+                      </div>
+                </span>
+              </div>
+              </li>
+
+              <!-- Nen menu -->
+                    <li>
+                        <div class="collapsible-header"><i class="material-icons">play_arrow</i>Totali i përdoruesve me qasje në Internet</div>
+                        <div class="collapsible-body"><span>
+                         <div class="row">
+                             <div class="col s12 center">
+                                 <b> Individual </b>
+                             </div>
+                         </div>
+                           <div class="row">
+                               <div class="input-field col s3">
+                                 <input name="internet_individual_gsm_prepaid" type="number" class="validate">
+                                 <label for="internet_individual_gsm_prepaid">GSM Prepaid</label>
+                               </div>
+                                 <div class="input-field col s3">
+                                   <input name="internet_individual_gsm_postpid" type="number" class="validate">
+                                   <label for="internet_individual_gsm_postpaid">GSM Postpaid</label>
+                                 </div>
+                               <div class="input-field col s3">
+                                 <input name="internet_individual_umts_prepaid" type="number" class="validate">
+                                 <label for="internet_individual_umts_prepaid">UMTS Prepaid</label>
+                               </div>
+                               <div class="input-field col s3">
+                                 <input name="internet_individual_umts_postpaid" type="number" class="validate">
+                                 <label for="internet_individual_umts_postpaid">UMTS Postpaid</label>
+                               </div>
+                             </div>
+                           <div class="row">
+                               <div class="input-field col s3">
+                                 <input name="internet_individual_lte_prepaid" type="number" class="validate">
+                                 <label for="internet_individual_lte_prepaid">LTE Prepaid</label>
+                               </div>
+                                 <div class="input-field col s3">
+                                   <input name="internet_individual_lte_postpaid" type="number" class="validate">
+                                   <label for="internet_individual_lte_postpaid">LTE Postpaid</label>
+                                 </div>
+                                 <div class="input-field col s6">
+                                   <input name="internet_individual_komenti" type="text" data-length="100">
+                                   <label for="internet_individual_komenti">Komenti</label>
+                                 </div>
+
+                           </div>
+                           <div class="row">
+                             <div class="input-field col s6">
+                               <input name="internet_individual_000s_prepaid" type="number" class="validate">
+                               <label for="internet_individual_000s_prepaid">Te hyrat ne '000s Prepaid</label>
+                             </div>
+                             <div class="input-field col s6">
+                               <input name="internet_individual_000s_postpaid" type="number" class="validate">
+                               <label for="internet_individual_000s_postpaid">Te hyrat ne '000s Postpaid</label>
+                             </div>
+                         </div>
+                        <!-- Biznesit   -->
+                        <div class="row">
+                            <div class="col s12 center">
+                                <b> Biznesit </b>
+                            </div>
+                        </div>
+                          <div class="row">
+                              <div class="input-field col s3">
+                                <input name="internet_biznes_gsm_prepaid" type="number" class="validate">
+                                <label for="internet_biznes_gsm_prepaid">GSM Prepaid</label>
+                              </div>
+                                <div class="input-field col s3">
+                                  <input name="internet_biznes_gsm_postpaid" type="number" class="validate">
+                                  <label for="internet_biznes_gsm_postpaid">GSM Postpaid</label>
+                                </div>
+                              <div class="input-field col s3">
+                                <input name="internet_biznes_umts_prepaid" type="number" class="validate">
+                                <label for="internet_biznes_umts_prepaid">UMTS Prepaid</label>
+                              </div>
+                              <div class="input-field col s3">
+                                <input name="internet_biznes_umts_postpaid" type="number" class="validate">
+                                <label for="internet_biznes_umts_postpaid">UMTS Postpaid</label>
+                              </div>
+
+                          </div>
+                          <div class="row">
+                              <div class="input-field col s3">
+                                <input name="internet_biznes_lte_prepaid" type="number" class="validate">
+                                <label for="internet_biznes_lte_prepaid">LTE Prepaid</label>
+                              </div>
+                                <div class="input-field col s3">
+                                  <input name="internet_biznes_lte_postpaid" type="number" class="validate">
+                                  <label for="internet_biznes_lte_postpaid">LTE Postpaid</label>
+                                </div>
+                                <div class="input-field col s6">
+                                  <input name="internet_biznes_komenti" type="text" data-length="100">
+                                  <label for="internet_biznes_komenti">Komenti</label>
+                                </div>
+
+                          </div>
+                          <div class="row">
+                            <div class="input-field col s6">
+                              <input name="internet_biznes_000s_prepaid" type="number" class="validate">
+                              <label for="internet_biznes_000s_prepaid">Te hyrat ne '000s Prepaid</label>
+                            </div>
+                            <div class="input-field col s6">
+                              <input name="internet_biznes_000s_postpaid" type="number" class="validate">
+                              <label for="internet_biznes_000s_postpaid">Te hyrat ne '000s Postpaid</label>
+                            </div>
+                        </div>
+
+
+                         </span>
+                     </div>
+                    </li>
+
+                    <!-- Nen menu -->
+
+                      <li>
+                            <div class="collapsible-header"><i class="material-icons">play_arrow</i>Totali i përdoruesve me qasje vetem në Internet (Data SIM)</div>
+                            <div class="collapsible-body"><span>
+                             <div class="row">
+                                 <div class="col s12 center">
+                                     <b> Individual </b>
+                                 </div>
+                             </div>
+                               <div class="row">
+                                   <div class="input-field col s3">
+                                     <input name="vetem_internet_individual_gsm_prepaid" type="number" class="validate">
+                                     <label for="vetem_internet_individual_gsm_prepaid">GSM Prepaid</label>
+                                   </div>
+                                     <div class="input-field col s3">
+                                       <input name="vetem_internet_individual_gsm_postpid" type="number" class="validate">
+                                       <label for="vetem_internet_individual_gsm_postpaid">GSM Postpaid</label>
+                                     </div>
+                                   <div class="input-field col s3">
+                                     <input name="vetem_internet_individual_umts_prepaid" type="number" class="validate">
+                                     <label for="vetem_internet_individual_umts_prepaid">UMTS Prepaid</label>
+                                   </div>
+                                   <div class="input-field col s3">
+                                     <input name="vetem_internet_individual_umts_postpaid" type="number" class="validate">
+                                     <label for="vetem_internet_individual_umts_postpaid">UMTS Postpaid</label>
+                                   </div>
+                                 </div>
+                               <div class="row">
+                                   <div class="input-field col s3">
+                                     <input name="vetem_internet_individual_lte_prepaid" type="number" class="validate">
+                                     <label for="vetem_internet_individual_lte_prepaid">LTE Prepaid</label>
+                                   </div>
+                                     <div class="input-field col s3">
+                                       <input name="vetem_internet_individual_lte_postpaid" type="number" class="validate">
+                                       <label for="vetem_internet_individual_lte_postpaid">LTE Postpaid</label>
+                                     </div>
+                                     <div class="input-field col s6">
+                                       <input name="vetem_internet_individual_komenti" type="text" data-length="100">
+                                       <label for="vetem_internet_individual_komenti">Komenti</label>
+                                     </div>
+
+                               </div>
+                               <div class="row">
+                                 <div class="input-field col s6">
+                                   <input name="vetem_internet_individual_000s_prepaid" type="number" class="validate">
+                                   <label for="vetem_internet_individual_000s_prepaid">Te hyrat ne '000s Prepaid</label>
+                                 </div>
+                                 <div class="input-field col s6">
+                                   <input name="vetem_internet_individual_000s_postpaid" type="number" class="validate">
+                                   <label for="vetem_internet_individual_000s_postpaid">Te hyrat ne '000s Postpaid</label>
+                                 </div>
+                             </div>
+                            <!-- Biznesit   -->
+                            <div class="row">
+                                <div class="col s12 center">
+                                    <b> Biznesit </b>
+                                </div>
+                            </div>
+                              <div class="row">
+                                  <div class="input-field col s3">
+                                    <input name="vetem_internet_biznes_gsm_prepaid" type="number" class="validate">
+                                    <label for="vetem_internet_biznes_gsm_prepaid">GSM Prepaid</label>
+                                  </div>
+                                    <div class="input-field col s3">
+                                      <input name="vetem_internet_biznes_gsm_postpaid" type="number" class="validate">
+                                      <label for="vetem_internet_biznes_gsm_postpaid">GSM Postpaid</label>
+                                    </div>
+                                  <div class="input-field col s3">
+                                    <input name="vetem_internet_biznes_umts_prepaid" type="number" class="validate">
+                                    <label for="vetem_internet_biznes_umts_prepaid">UMTS Prepaid</label>
+                                  </div>
+                                  <div class="input-field col s3">
+                                    <input name="vetem_internet_biznes_umts_postpaid" type="number" class="validate">
+                                    <label for="vetem_internet_biznes_umts_postpaid">UMTS Postpaid</label>
+                                  </div>
+
+                              </div>
+                              <div class="row">
+                                  <div class="input-field col s3">
+                                    <input name="vetem_internet_biznes_lte_prepaid" type="number" class="validate">
+                                    <label for="vetem_internet_biznes_lte_prepaid">LTE Prepaid</label>
+                                  </div>
+                                    <div class="input-field col s3">
+                                      <input name="vetem_internet_biznes_lte_postpaid" type="number" class="validate">
+                                      <label for="vetem_internet_biznes_lte_postpaid">LTE Postpaid</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                      <input name="vetem_internet_biznes_komenti" type="text" data-length="100">
+                                      <label for="vetem_internet_biznes_komenti">Komenti</label>
+                                    </div>
+
+                              </div>
+                              <div class="row">
+                                <div class="input-field col s6">
+                                  <input name="vetem_internet_biznes_000s_prepaid" type="number" class="validate">
+                                  <label for="vetem_internet_biznes_000s_prepaid">Te hyrat ne '000s Prepaid</label>
+                                </div>
+                                <div class="input-field col s6">
+                                  <input name="vetem_internet_biznes_000s_postpaid" type="number" class="validate">
+                                  <label for="vetem_internet_biznes_000s_postpaid">Te hyrat ne '000s Postpaid</label>
+                                </div>
+                            </div>
+
+
+                             </span>
+                         </div>
+                        </li>
+
+                  <!-- end of menus -->
+       </ul>
+     </span>
+     <!-- Fundi -->
+       </div>
+    </li>
+
+
     <!-- ***************************************************************************************************************
     *************************************************************************************************************** -->
 
     <li>
        <div class="collapsible-header"><i class="material-icons">call_received</i>Trafiku dhe të hyrat nga origjinimi i thirrjeve (Outgoing)</div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body">
+         <span>
+           SHËNIM: Ju lutem vendosni të dhënat dhe infomracionin për periudhën që këkohet në formatin e tabelave më poshtë.
+           Inofrmacionet financiare  të jepet në Euro pa përfshirë TVSH-në përveç në pjesën e tarifave me pakicë.
+
+
+         <ul class="collapsible" data-collapsible="accordion">
+               <li>
+                 <div class="collapsible-header"><i class="material-icons">play_arrow</i>Trafiku total nga përdoruesit me Kontratë (postpaid)</div>
+                 <div class="collapsible-body">
+                   <span>
+                    <div class="row">
+                        <div class="col s12 center">
+                            <b> Individual</b>
+                          </div>
+                    </div>
+                      <div class="row">
+                          <div class="input-field col s3">
+                            <input name="trafiku_kontrate_individual_minuta" type="number" class="validate">
+                            <label for="trafiku_kontrate_individual_minuta">Nr. i minutave në '000</label>
+                          </div>
+                            <div class="input-field col s3">
+                              <input name="trafiku_kontrate_individual_hyrat" type="number" class="validate">
+                              <label for="trafiku_kontrate_individual_hyrat">Të hyrat në '000s</label>
+                            </div>
+                          <div class="input-field col s6">
+                            <input name="trafiku_kontrate_individual_komenti" type="text" data-length="100">
+                            <label for="trafiku_kontrate_individual_komenti">Komenti</label>
+                          </div>
+                        </div>
+                  </span>
+                  <div class="divider"></div>
+                  <br>
+                  <span>
+                    <div class="row">
+                        <div class="col s12 center">
+
+                            <b> Biznesit </b>
+                        </div>
+                      </div>
+                              <div class="row">
+                                    <div class="input-field col s3">
+                                      <input name="trafiku_kontrate_biznes_minuta" type="number" class="validate">
+                                      <label for="trafiku_kontrate_biznes_minuta">Nr. i minutave në '000</label>
+                                    </div>
+                                      <div class="input-field col s3">
+                                        <input name="trafiku_kontrate_biznes_hyrat" type="number" class="validate">
+                                        <label for="trafiku_kontrate_biznes_hyrat">Të hyrat në '000s</label>
+                                      </div>
+                                    <div class="input-field col s6">
+                                      <input name="trafiku_kontrate_biznes_komenti" type="text" data-length="100">
+                                      <label for="trafiku_kontrate_biznes_komenti">Komenti</label>
+                                    </div>
+                                </div>
+                  </span>
+               </div>
+               </li>
+                     <li>
+                         <div class="collapsible-header"><i class="material-icons">play_arrow</i>Trafiku total nga përdoruesit me parapagim (prepaid)</div>
+                         <div class="collapsible-body">
+                          <span>
+                          <div class="row">
+                              <div class="col s12 center">
+                                  <b> Individual</b>
+                                </div>
+                          </div>
+                            <div class="row">
+                                <div class="input-field col s3">
+                                  <input name="trafiku_parapagim_individual_minuta" type="number" class="validate">
+                                  <label for="trafiku_parapagim_individual_minuta">Nr. i minutave në '000</label>
+                                </div>
+                                  <div class="input-field col s3">
+                                    <input name="trafiku_parapagim_individual_hyrat" type="number" class="validate">
+                                    <label for="trafiku_parapagim_individual_hyrat">Të hyrat në '000s</label>
+                                  </div>
+                                <div class="input-field col s6">
+                                  <input name="trafiku_parapagim_individual_komenti" type="text" data-length="100">
+                                  <label for="trafiku_parapagim_individual_komenti">Komenti</label>
+                                </div>
+                              </div>
+                        </span>
+                        <div class="divider"></div>
+                        <br>
+                        <span>
+                          <div class="row">
+                              <div class="col s12 center">
+
+                                  <b> Biznesit </b>
+                              </div>
+                            </div>
+                                    <div class="row">
+                                          <div class="input-field col s3">
+                                            <input name="trafiku_parapagim_biznes_minuta" type="number" class="validate">
+                                            <label for="trafiku_parapagim_biznes_minuta">Nr. i minutave në '000</label>
+                                          </div>
+                                            <div class="input-field col s3">
+                                              <input name="trafiku_parapagim_biznes_hyrat" type="number" class="validate">
+                                              <label for="trafiku_parapagim_biznes_hyrat">Të hyrat në '000s</label>
+                                            </div>
+                                          <div class="input-field col s6">
+                                            <input name="trafiku_parapagim_biznes_komenti" type="text" data-length="100">
+                                            <label for="trafiku_parapagim_biznes_komenti">Komenti</label>
+                                          </div>
+                                      </div>
+                        </span>
+                      </div>
+                     </li>
+                     <li>
+                         <div class="collapsible-header"><i class="material-icons">play_arrow</i>Trafiku i origjinuar sipas destinacionit </div>
+                         <div class="collapsible-body">
+                           <span>
+                           <div class="row">
+                               <div class="col s12 center">
+                                   <b> Brenda Rrjetit (On-net)</b>
+                                 </div>
+                           </div>
+                             <div class="row">
+                                 <div class="input-field col s3">
+                                   <input name="trafiku_distinacioni_brenda_rrjetit_minuta" type="number" class="validate">
+                                   <label for="trafiku_distinacioni_brenda_rrjetit_minuta">Nr. i minutave në '000</label>
+                                 </div>
+                                   <div class="input-field col s3">
+                                     <input name="trafiku_distinacioni_brenda_rrjetit_hyrat" type="number" class="validate">
+                                     <label for="trafiku_distinacioni_brenda_rrjetit_hyrat">Të hyrat në '000s</label>
+                                   </div>
+                                 <div class="input-field col s6">
+                                   <input name="trafiku_distinacioni_brenda_rrjetit_komenti" type="text" data-length="100">
+                                   <label for="trafiku_distinacioni_brenda_rrjetit_komenti">Komenti</label>
+                                 </div>
+                               </div>
+                         </span>
+                         <div class="divider"></div>
+                         <br>
+                         <span>
+                           <div class="row">
+                               <div class="col s12 center">
+                                 <b> Në rrjetet tjera mobile (Off-net) </b>
+                               </div>
+                             </div>
+                                     <div class="row">
+                                           <div class="input-field col s3">
+                                             <input name="trafiku_distinacioni_jashte_rrjetit_minuta" type="number" class="validate">
+                                             <label for="trafiku_distinacioni_jashte_rrjetit_minuta">Nr. i minutave në '000</label>
+                                           </div>
+                                             <div class="input-field col s3">
+                                               <input name="trafiku_distinacioni_jashte_rrjetit_hyrat" type="number" class="validate">
+                                               <label for="trafiku_distinacioni_jashte_rrjetit_hyrat">Të hyrat në '000s</label>
+                                             </div>
+                                           <div class="input-field col s6">
+                                             <input name="trafiku_distinacioni_jashte_rrjetit_komenti" type="text" data-length="100">
+                                             <label for="trafiku_distinacioni_jashte_rrjetit_komenti">Komenti</label>
+                                           </div>
+                                       </div>
+                         </span>
+                         <span>
+                           <div class="row">
+                               <div class="col s12 center">
+                                 <b>  <div class="input-field col s4 offset-s4">
+                                          <input placeholder="Sheno emrin e Operatorit" name="trafiku_distinacioni_jashte_rrjetit_operatori1_emri" type="text" class="validate">
+                                      </div>
+                                  </b>
+                               </div>
+                             </div>
+                                     <div class="row">
+                                           <div class="input-field col s3">
+                                             <input name="trafiku_distinacioni_jashte_rrjetit_operatori1_minuta" type="number" class="validate">
+                                             <label for="trafiku_distinacioni_jashte_rrjetit_operatori1_minuta">Nr. i minutave në '000</label>
+                                           </div>
+                                             <div class="input-field col s3">
+                                               <input name="trafiku_distinacioni_jashte_rrjetit_operatori1_hyrat" type="number" class="validate">
+                                               <label for="trafiku_distinacioni_jashte_rrjetit_operatori1_hyrat">Të hyrat në '000s</label>
+                                             </div>
+                                           <div class="input-field col s6">
+                                             <input name="trafiku_distinacioni_jashte_rrjetit_operatori1_komenti" type="text" data-length="100">
+                                             <label for="trafiku_distinacioni_jashte_rrjetit_operatori1_komenti">Komenti</label>
+                                           </div>
+                                       </div>
+                         </span>
+                         </div>
+                     </li>
+                     <li>
+                         <div class="collapsible-header"><i class="material-icons">play_arrow</i>Drejt rrjeteve fikse </div>
+                         <div class="collapsible-body">
+                          <span>
+                           <div class="row">
+                               <div class="col s12 center">
+                                 <b>  <div class="input-field col s4 offset-s4">
+                                          <input placeholder="Sheno emrin e Operatorit" name="rrjete_fikse_operatori1_emri" type="text" class="validate">
+                                      </div>
+                                  </b>
+                               </div>
+                             </div>
+                                     <div class="row">
+                                           <div class="input-field col s3">
+                                             <input name="rrjete_fikse_operatori1_minuta" type="number" class="validate">
+                                             <label for="rrjete_fikse_operatori1_minuta">Nr. i minutave në '000</label>
+                                           </div>
+                                             <div class="input-field col s3">
+                                               <input name="rrjete_fikse_operatori1_hyrat" type="number" class="validate">
+                                               <label for="rrjete_fikse_operatori1_hyrat">Të hyrat në '000s</label>
+                                             </div>
+                                           <div class="input-field col s6">
+                                             <input name="rrjete_fikse_operatori1_komenti" type="text" data-length="100">
+                                             <label for="rrjete_fikse_operatori1_komenti">Komenti</label>
+                                           </div>
+                                       </div>
+                         </span>
+                         </div>
+                     </li>
+                     <li>
+                       <div class="collapsible-header"><i class="material-icons">play_arrow</i>Trafiku total drejt rrejteve Ndërkombëtare</div>
+                       <div class="collapsible-body">
+                           <span>
+                            <div class="row">
+                                <div class="col s12 center">
+                                    <b> Shqipëri</b>
+                                  </div>
+                            </div>
+                              <div class="row">
+                                  <div class="input-field col s3">
+                                    <input name="trafiku_nderkombtar_shqiperi_minuta" type="number" class="validate">
+                                    <label for="trafiku_nderkombtar_shqiperi_minuta">Nr. i minutave në '000</label>
+                                  </div>
+                                    <div class="input-field col s3">
+                                      <input name="trafiku_nderkombtar_shqiperi_hyrat" type="number" class="validate">
+                                      <label for="trafiku_nderkombtar_shqiperi_hyrat">Të hyrat në '000s</label>
+                                    </div>
+                                  <div class="input-field col s6">
+                                    <input name="trafiku_nderkombtar_shqiperi_komenti" type="text" data-length="100">
+                                    <label for="trafiku_nderkombtar_shqiperi_komenti">Komenti</label>
+                                  </div>
+                                </div>
+                          </span>
+                        <div class="divider"></div><br>
+                          <span>
+                           <div class="row">
+                               <div class="col s12 center">
+                                   <b> Maqedoni</b>
+                                 </div>
+                           </div>
+                             <div class="row">
+                                 <div class="input-field col s3">
+                                   <input name="trafiku_nderkombtar_maqedoni_minuta" type="number" class="validate">
+                                   <label for="trafiku_nderkombtar_maqedoni_minuta">Nr. i minutave në '000</label>
+                                 </div>
+                                   <div class="input-field col s3">
+                                     <input name="trafiku_nderkombtar_maqedoni_hyrat" type="number" class="validate">
+                                     <label for="trafiku_nderkombtar_maqedoni_hyrat">Të hyrat në '000s</label>
+                                   </div>
+                                 <div class="input-field col s6">
+                                   <input name="trafiku_nderkombtar_maqedoni_komenti" type="text" data-length="100">
+                                   <label for="trafiku_nderkombtar_maqedoni_komenti">Komenti</label>
+                                 </div>
+                               </div>
+                         </span>
+                         <div class="divider"></div><br>
+                           <span>
+                            <div class="row">
+                                <div class="col s12 center">
+                                    <b> Mal të Zi</b>
+                                  </div>
+                            </div>
+                              <div class="row">
+                                  <div class="input-field col s3">
+                                    <input name="trafiku_nderkombtar_malizi_minuta" type="number" class="validate">
+                                    <label for="trafiku_nderkombtar_malizi_minuta">Nr. i minutave në '000</label>
+                                  </div>
+                                    <div class="input-field col s3">
+                                      <input name="trafiku_nderkombtar_malizi_hyrat" type="number" class="validate">
+                                      <label for="trafiku_nderkombtar_malizi_hyrat">Të hyrat në '000s</label>
+                                    </div>
+                                  <div class="input-field col s6">
+                                    <input name="trafiku_nderkombtar_malizi_komenti" type="text" data-length="100">
+                                    <label for="trafiku_nderkombtar_malizi_komenti">Komenti</label>
+                                  </div>
+                                </div>
+                          </span>
+                          <div class="divider"></div><br>
+                            <span>
+                             <div class="row">
+                                 <div class="col s12 center">
+                                     <b> Serbi</b>
+                                   </div>
+                             </div>
+                               <div class="row">
+                                   <div class="input-field col s3">
+                                     <input name="trafiku_nderkombtar_serbi_minuta" type="number" class="validate">
+                                     <label for="trafiku_nderkombtar_serbi_minuta">Nr. i minutave në '000</label>
+                                   </div>
+                                     <div class="input-field col s3">
+                                       <input name="trafiku_nderkombtar_serbi_hyrat" type="number" class="validate">
+                                       <label for="trafiku_nderkombtar_serbi_hyrat">Të hyrat në '000s</label>
+                                     </div>
+                                   <div class="input-field col s6">
+                                     <input name="trafiku_nderkombtar_serbi_komenti" type="text" data-length="100">
+                                     <label for="trafiku_nderkombtar_serbi_komenti">Komenti</label>
+                                   </div>
+                                 </div>
+                           </span>
+                           <div class="divider"></div><br>
+                             <span>
+                              <div class="row">
+                                  <div class="col s12 center">
+                                      <b> Kroaci</b>
+                                    </div>
+                              </div>
+                                <div class="row">
+                                    <div class="input-field col s3">
+                                      <input name="trafiku_nderkombtar_kroaci_minuta" type="number" class="validate">
+                                      <label for="trafiku_nderkombtar_kroaci_minuta">Nr. i minutave në '000</label>
+                                    </div>
+                                      <div class="input-field col s3">
+                                        <input name="trafiku_nderkombtar_kroaci_hyrat" type="number" class="validate">
+                                        <label for="trafiku_nderkombtar_kroaci_hyrat">Të hyrat në '000s</label>
+                                      </div>
+                                    <div class="input-field col s6">
+                                      <input name="trafiku_nderkombtar_kroaci_komenti" type="text" data-length="100">
+                                      <label for="trafiku_nderkombtar_kroaci_komenti">Komenti</label>
+                                    </div>
+                                  </div>
+                            </span>
+                            <div class="divider"></div><br>
+                              <span>
+                               <div class="row">
+                                   <div class="col s12 center">
+                                       <b> Bosne dhe Hercegovinë</b>
+                                     </div>
+                               </div>
+                                 <div class="row">
+                                     <div class="input-field col s3">
+                                       <input name="trafiku_nderkombtar_bonse_hercegovine_minuta" type="number" class="validate">
+                                       <label for="trafiku_nderkombtar_bonse_hercegovine_minuta">Nr. i minutave në '000</label>
+                                     </div>
+                                       <div class="input-field col s3">
+                                         <input name="trafiku_nderkombtar_bonse_hercegovine_hyrat" type="number" class="validate">
+                                         <label for="trafiku_nderkombtar_bonse_hercegovine_hyrat">Të hyrat në '000s</label>
+                                       </div>
+                                     <div class="input-field col s6">
+                                       <input name="trafiku_nderkombtar_bonse_hercegovine_komenti" type="text" data-length="100">
+                                       <label for="trafiku_nderkombtar_bonse_hercegovine_komenti">Komenti</label>
+                                     </div>
+                                   </div>
+                             </span>
+                             <div class="divider"></div><br>
+                               <span>
+                                <div class="row">
+                                    <div class="col s12 center">
+                                        <b> Turqi</b>
+                                      </div>
+                                </div>
+                                  <div class="row">
+                                      <div class="input-field col s3">
+                                        <input name="trafiku_nderkombtar_turqi_minuta" type="number" class="validate">
+                                        <label for="trafiku_nderkombtar_turqi_minuta">Nr. i minutave në '000</label>
+                                      </div>
+                                        <div class="input-field col s3">
+                                          <input name="trafiku_nderkombtar_turqi_hyrat" type="number" class="validate">
+                                          <label for="trafiku_nderkombtar_turqi_hyrat">Të hyrat në '000s</label>
+                                        </div>
+                                      <div class="input-field col s6">
+                                        <input name="trafiku_nderkombtar_turqi_komenti" type="text" data-length="100">
+                                        <label for="trafiku_nderkombtar_turqi_komenti">Komenti</label>
+                                      </div>
+                                    </div>
+                              </span>
+                              <div class="divider"></div><br>
+                                <span>
+                                 <div class="row">
+                                     <div class="col s12 center">
+                                         <b> Gjermani</b>
+                                       </div>
+                                 </div>
+                                   <div class="row">
+                                       <div class="input-field col s3">
+                                         <input name="trafiku_nderkombtar_gjermani_minuta" type="number" class="validate">
+                                         <label for="trafiku_nderkombtar_gjermani_minuta">Nr. i minutave në '000</label>
+                                       </div>
+                                         <div class="input-field col s3">
+                                           <input name="trafiku_nderkombtar_gjermani_hyrat" type="number" class="validate">
+                                           <label for="trafiku_nderkombtar_gjermani_hyrat">Të hyrat në '000s</label>
+                                         </div>
+                                       <div class="input-field col s6">
+                                         <input name="trafiku_nderkombtar_gjermani_komenti" type="text" data-length="100">
+                                         <label for="trafiku_nderkombtar_gjermani_komenti">Komenti</label>
+                                       </div>
+                                     </div>
+                               </span>
+                               <div class="divider"></div><br>
+                                 <span>
+                                  <div class="row">
+                                      <div class="col s12 center">
+                                          <b> Itali</b>
+                                        </div>
+                                  </div>
+                                    <div class="row">
+                                        <div class="input-field col s3">
+                                          <input name="trafiku_nderkombtar_itali_minuta" type="number" class="validate">
+                                          <label for="trafiku_nderkombtar_itali_minuta">Nr. i minutave në '000</label>
+                                        </div>
+                                          <div class="input-field col s3">
+                                            <input name="trafiku_nderkombtar_itali_hyrat" type="number" class="validate">
+                                            <label for="trafiku_nderkombtar_itali_hyrat">Të hyrat në '000s</label>
+                                          </div>
+                                        <div class="input-field col s6">
+                                          <input name="trafiku_nderkombtar_itali_komenti" type="text" data-length="100">
+                                          <label for="trafiku_nderkombtar_itali_komenti">Komenti</label>
+                                        </div>
+                                      </div>
+                                </span>
+                                <div class="divider"></div><br>
+                                  <span>
+                                   <div class="row">
+                                       <div class="col s12 center">
+                                           <b> Francë</b>
+                                         </div>
+                                   </div>
+                                     <div class="row">
+                                         <div class="input-field col s3">
+                                           <input name="trafiku_nderkombtar_france_minuta" type="number" class="validate">
+                                           <label for="trafiku_nderkombtar_france_minuta">Nr. i minutave në '000</label>
+                                         </div>
+                                           <div class="input-field col s3">
+                                             <input name="trafiku_nderkombtar_france_hyrat" type="number" class="validate">
+                                             <label for="trafiku_nderkombtar_france_hyrat">Të hyrat në '000s</label>
+                                           </div>
+                                         <div class="input-field col s6">
+                                           <input name="trafiku_nderkombtar_france_komenti" type="text" data-length="100">
+                                           <label for="trafiku_nderkombtar_france_komenti">Komenti</label>
+                                         </div>
+                                       </div>
+                                 </span>
+                                 <div class="divider"></div><br>
+                                   <span>
+                                    <div class="row">
+                                        <div class="col s12 center">
+                                            <b> Zvicërr</b>
+                                          </div>
+                                    </div>
+                                      <div class="row">
+                                          <div class="input-field col s3">
+                                            <input name="trafiku_nderkombtar_zvicerr_minuta" type="number" class="validate">
+                                            <label for="trafiku_nderkombtar_zvicerr_minuta">Nr. i minutave në '000</label>
+                                          </div>
+                                            <div class="input-field col s3">
+                                              <input name="trafiku_nderkombtar_zvicerr_hyrat" type="number" class="validate">
+                                              <label for="trafiku_nderkombtar_zvicerr_hyrat">Të hyrat në '000s</label>
+                                            </div>
+                                          <div class="input-field col s6">
+                                            <input name="trafiku_nderkombtar_zvicerr_komenti" type="text" data-length="100">
+                                            <label for="trafiku_nderkombtar_zvicerr_komenti">Komenti</label>
+                                          </div>
+                                        </div>
+                                  </span>
+                                  <div class="divider"></div><br>
+                                    <span>
+                                     <div class="row">
+                                         <div class="col s12 center">
+                                             <b> Mbretëri e Bashkuar</b>
+                                           </div>
+                                     </div>
+                                       <div class="row">
+                                           <div class="input-field col s3">
+                                             <input name="trafiku_nderkombtar_britani_minuta" type="number" class="validate">
+                                             <label for="trafiku_nderkombtar_britani_minuta">Nr. i minutave në '000</label>
+                                           </div>
+                                             <div class="input-field col s3">
+                                               <input name="trafiku_nderkombtar_britani_hyrat" type="number" class="validate">
+                                               <label for="trafiku_nderkombtar_britani_hyrat">Të hyrat në '000s</label>
+                                             </div>
+                                           <div class="input-field col s6">
+                                             <input name="trafiku_nderkombtar_britani_komenti" type="text" data-length="100">
+                                             <label for="trafiku_nderkombtar_britani_komenti">Komenti</label>
+                                           </div>
+                                         </div>
+                                   </span>
+                                   <div class="divider"></div><br>
+                                     <span>
+                                      <div class="row">
+                                          <div class="col s12 center">
+                                              <b> SHBA</b>
+                                            </div>
+                                      </div>
+                                        <div class="row">
+                                            <div class="input-field col s3">
+                                              <input name="trafiku_nderkombtar_shba_minuta" type="number" class="validate">
+                                              <label for="trafiku_nderkombtar_shba_minuta">Nr. i minutave në '000</label>
+                                            </div>
+                                              <div class="input-field col s3">
+                                                <input name="trafiku_nderkombtar_shba_hyrat" type="number" class="validate">
+                                                <label for="trafiku_nderkombtar_shba_hyrat">Të hyrat në '000s</label>
+                                              </div>
+                                            <div class="input-field col s6">
+                                              <input name="trafiku_nderkombtar_shba_komenti" type="text" data-length="100">
+                                              <label for="trafiku_nderkombtar_shba_komenti">Komenti</label>
+                                            </div>
+                                          </div>
+                                    </span>
+                                    <div class="divider"></div><br>
+                                      <span>
+                                       <div class="row">
+                                           <div class="col s12 center">
+                                               <b> Kanadë</b>
+                                             </div>
+                                       </div>
+                                         <div class="row">
+                                             <div class="input-field col s3">
+                                               <input name="trafiku_nderkombtar_kanade_minuta" type="number" class="validate">
+                                               <label for="trafiku_nderkombtar_kanade_minuta">Nr. i minutave në '000</label>
+                                             </div>
+                                               <div class="input-field col s3">
+                                                 <input name="trafiku_nderkombtar_kanade_hyrat" type="number" class="validate">
+                                                 <label for="trafiku_nderkombtar_kanade_hyrat">Të hyrat në '000s</label>
+                                               </div>
+                                             <div class="input-field col s6">
+                                               <input name="trafiku_nderkombtar_kanade_komenti" type="text" data-length="100">
+                                               <label for="trafiku_nderkombtar_kanade_komenti">Komenti</label>
+                                             </div>
+                                           </div>
+                                     </span>
+                                     <div class="divider"></div><br>
+                                       <span>
+                                        <div class="row">
+                                            <div class="col s12 center">
+                                                <b> Totali i trafikut dhe të hyrave drejt shteteve</b>
+                                              </div>
+                                        </div>
+                                          <div class="row">
+                                              <div class="input-field col s3">
+                                                <input name="trafiku_nderkombtar_total_shteteve_minuta" type="number" class="validate">
+                                                <label for="trafiku_nderkombtar_total_shteteve_minuta">Nr. i minutave në '000</label>
+                                              </div>
+                                                <div class="input-field col s3">
+                                                  <input name="trafiku_nderkombtar_total_shteteve_hyrat" type="number" class="validate">
+                                                  <label for="trafiku_nderkombtar_total_shteteve_hyrat">Të hyrat në '000s</label>
+                                                </div>
+                                              <div class="input-field col s6">
+                                                <input name="trafiku_nderkombtar_total_shteteve_komenti" type="text" data-length="100">
+                                                <label for="trafiku_nderkombtar_total_shteteve_komenti">Komenti</label>
+                                              </div>
+                                            </div>
+                                      </span>
+
+                      </div>
+                     </li>
+        </ul>
+      </span>
+       </div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -349,7 +1223,7 @@
 
     <li>
        <div class="collapsible-header"><i class="material-icons">message</i>Trafiku dhe të hyrat nga origjinimi i SMS dhe MMS (Outgoing)</div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body"><span>Ne proces e siper</span></div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -357,7 +1231,7 @@
 
     <li>
        <div class="collapsible-header"><i class="material-icons">call_missed</i>Trafiku në ardhje/i terminuar i thirrjeve (Incoming)</div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body"><span>Ne proces e siper</span></div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -365,7 +1239,7 @@
 
     <li>
        <div class="collapsible-header"><i class="material-icons">call_merge</i>Trafiku dhe të hyrat nga Roamingu</div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body"><span>Ne proces e siper</span></div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -373,7 +1247,7 @@
 
     <li>
        <div class="collapsible-header"><i class="material-icons">perm_data_setting</i>Trafiku i të dhënave Data </div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body"><span>Ne proces e siper</span></div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -381,7 +1255,7 @@
 
     <li>
        <div class="collapsible-header"><i class="material-icons">payment</i>Tarifat me parapagim (Pre-paid) </div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body"><span>Ne proces e siper</span></div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -389,7 +1263,7 @@
 
     <li>
        <div class="collapsible-header"><i class="material-icons">receipt</i>Tarifat me Kontratë (Post-paid) </div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body"><span>Ne proces e siper</span></div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -397,7 +1271,7 @@
 
     <li>
        <div class="collapsible-header"><i class="material-icons">call_merge</i>Tarifat e Roamingut të përdoruesve me parapagim (Pre-paid) </div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body"><span>Ne proces e siper</span></div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -405,7 +1279,7 @@
 
     <li>
        <div class="collapsible-header"><i class="material-icons">call_merge</i>Tarifat e Roamingut të përdoruesve me Kontratë (Post-paid) </div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body"><span>Ne proces e siper</span></div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -413,7 +1287,7 @@
 
     <li>
        <div class="collapsible-header"><i class="material-icons">shopping_cart</i>Fitimi para tatimit për vitin paraparka  </div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body"><span>Ne proces e siper</span></div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -421,7 +1295,7 @@
 
     <li>
        <div class="collapsible-header"><i class="material-icons">store</i> Të dhënat tjera financiare (€) </div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body"><span>Ne proces e siper</span></div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -429,7 +1303,7 @@
 
     <li>
        <div class="collapsible-header"><i class="material-icons">info_outline</i>Marrëveshjet e Interkoneksionit </div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body"><span>Ne proces e siper</span></div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -437,7 +1311,7 @@
 
     <li>
        <div class="collapsible-header"><i class="material-icons">group_work</i>Të dhënat mbi numrin e punëtorëve </div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body"><span>Ne proces e siper</span></div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -445,7 +1319,7 @@
 
     <li>
        <div class="collapsible-header"><i class="material-icons">whatshot</i>PER QEF QITA :D</div>
-       <div class="collapsible-body"><span>Ne process e siper</span></div>
+       <div class="collapsible-body"><span>Ne proces e siper</span></div>
     </li>
 
     <!-- ***************************************************************************************************************
@@ -457,6 +1331,14 @@
 
 <!-- *************************UL KRYESORE  perfudni qisaj mos me fshi*************ju lutem******** -->
 </ul>
+<div class="col s12 center">
+  <div class="row">
+<button class="btn waves-effect waves-light " type="submit" name="action">Submit
+   <i class="material-icons right">send</i>
+ </button>
+ </div>
+ </div>
+<form>
 <!-- ***************************************************************************************
 ***********PERFUNDIMI I FORMES******************************************************** -->
 
