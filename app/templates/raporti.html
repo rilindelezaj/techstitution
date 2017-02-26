@@ -1,48 +1,321 @@
-{% extends 'layout.html'%}
+----{% extends 'layout.html'%}
 {% block form %}
 
 
   <div class="container">
-    <br><br>
-    <h1 class="header center orange-text">{{ report['nderrmarja']['emri'] }}</h1>
+      <h1 class="header center blue-text">{{ report['pyetsori_tel_mobile']['kompania']['emri_ndermarrjes'] }}</h1>
 
-  <ul>
 
-  <li>
-    <div class="row center">
-      <div class="col s6 right-align">Personi kontaktues:</div>
-      <div class="col s6 left-align"><u>{{ report['nderrmarja']['personi_kontaktues'] }}</u></div>
-    </div>
-  	</li>
+  <ul class="collapsible popout" data-collapsible="accordion">
     <li>
-      <div class="row center">
-        <div class="col s6 right-align">Numri Regjistrimi:</div>
-        <div class="col s6 left-align"><u>{{ report['nderrmarja']['numri_regjistrimi'] }}</u></div>
-      </div>
-      </li>
-      <li>
-        <div class="row center">
-          <div class="col s6 right-align">Adresa:</div>
-          <div class="col s6 left-align"><u>{{ report['nderrmarja']['adresa'] }}</u></div>
-        </div>
-      	</li>
-        <li>
-          <div class="row center">
-            <div class="col s6 right-align">Telefoni:</div>
-            <div class="col s6 left-align"><u>{{ report['nderrmarja']['telefoni'] }}</u></div>
-          </div>
-        	</li>
-          <li>
+          <div class="collapsible-header"><i class="material-icons">perm_identity</i>Të dhënat për ndërmarrjen</div>
+          <div class="collapsible-body">
+            <span>
+
+                <ul>
+
+                  <li>
+                  <div class="row center">
+                    <div class="col s6 right-align">Personi kontaktues:</div>
+                    <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['kompania']['personi_kontaktues'] }}</u></div>
+                  </div>
+                	</li>
+                  <li>
+                    <div class="row center">
+                      <div class="col s6 right-align">Numri Regjistrimi:</div>
+                      <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['kompania']['nr_regjistrimit'] }}</u></div>
+                    </div>
+                    </li>
+                    <li>
+                      <div class="row center">
+                        <div class="col s6 right-align">Adresa:</div>
+                        <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['kompania']['adresa'] }}</u></div>
+                      </div>
+                    	</li>
+                      <li>
+                        <div class="row center">
+                          <div class="col s6 right-align">Telefoni:</div>
+                          <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['kompania']['telefoni'] }}</u></div>
+                        </div>
+                      	</li>
+                        <li>
+                          <div class="row center">
+                            <div class="col s6 right-align">Email:</div>
+                            <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['kompania']['email_adresa'] }}</u></div>
+                          </div>
+                        	</li>
+                          <li>
+                            <div class="row center">
+                              <div class="col s6 right-align">Email:</div>
+                              <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['Te_dhenat_mbi_puntorin']['Puntoret_me_orar_te_pjeseshem']['Komente'] }}</u></div>
+                            </div>
+                          	</li>
+                </ul>
+            </span>
+
+</div>
+</li>
+<!-- ------------------------------------------------------------------------------- -->
+<li>
+      <div class="collapsible-header"><i class="material-icons">perm_scan_wifi</i>Infrastruktura e rrjetit</div>
+      <div class="collapsible-body">
+        <span>
+              <ul>
+              <div class="row center">
+                <div class="col s12 center-align"><b>Mbulesheria</b></div>
+                <div class="col s12 center-align">Mbulesheria e popullsise</div>
+              </div>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">GSM:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['mbulueshmeria']['popullsise']['gsm'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">UTMS:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['mbulueshmeria']['popullsise']['umts'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">LTE:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['mbulueshmeria']['popullsise']['lte'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">Komente:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['mbulueshmeria']['popullsise']['komente'] }}</u></div>
+              </div>
+              </li>
+              <!-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+              <div class="row center">
+                <div class="col s12 center-align"><b></b></div>
+                <div class="col s12 center-align">Mbulesheria e territorit</div>
+              </div>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">GSM:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['mbulueshmeria']['territori']['gsm'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">UTMS:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['mbulueshmeria']['territori']['umts'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">LTE:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['mbulueshmeria']['territori']['lte'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">Komente:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['mbulueshmeria']['territori']['komente'] }}</u></div>
+              </div>
+              </li>
+              <!-- ................................................................................................................................................ -->
+              <div class="row center">
+                <div class="col s12 center-align"><b>Elementet e Rrjetit</b></div>
+                <div class="col s12 center-align">Qendrat e centraleve mobile </div>
+              </div>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">GSM:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['qendrat_centraleve_mobile']['gsm'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">UTMS:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['qendrat_centraleve_mobile']['umts'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">LTE:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['qendrat_centraleve_mobile']['lte'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">Komente:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['qendrat_centraleve_mobile']['komente'] }}</u></div>
+              </div>
+              <!-- .............................................................................. -->
+              <div class="row center">
+                <div class="col s12 center-align">Portat e qendrave të centraleve mobile  </div>
+              </div>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">GSM:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['portat_qendrat_centraleve_mobile']['gsm'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">UTMS:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['portat_qendrat_centraleve_mobile']['umts'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">LTE:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['portat_qendrat_centraleve_mobile']['lte'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">Komente:</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['portat_qendrat_centraleve_mobile']['komente'] }}</u></div>
+              </div>
+            <!-- ....................................................................... -->
             <div class="row center">
-              <div class="col s6 right-align">Email:</div>
-              <div class="col s6 left-align"><u>{{ report['nderrmarja']['email'] }}</u></div>
+              <div class="col s12 center-align">Kontrollues të stacioneve bazë  </div>
             </div>
-          	</li>
+            <li>
+            <div class="row center">
+              <div class="col s6 right-align">GSM:</div>
+              <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['kontrollues_stacione_baze']['gsm'] }}</u></div>
+            </div>
+            </li>
+            <li>
+            <div class="row center">
+              <div class="col s6 right-align">UTMS:</div>
+              <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['kontrollues_stacione_baze']['umts'] }}</u></div>
+            </div>
+            </li>
+            <li>
+            <div class="row center">
+              <div class="col s6 right-align">LTE:</div>
+              <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['kontrollues_stacione_baze']['lte'] }}</u></div>
+            </div>
+            </li>
+            <li>
+            <div class="row center">
+              <div class="col s6 right-align">Komente:</div>
+              <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['kontrollues_stacione_baze']['komente'] }}</u></div>
+            </div>
+          <!-- ....................................................................... -->
+          <div class="row center">
+            <div class="col s12 center-align">Stacionet bazë  </div>
+          </div>
+          <li>
+          <div class="row center">
+            <div class="col s6 right-align">GSM:</div>
+            <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['stacionet_baze']['gsm'] }}</u></div>
+          </div>
+          </li>
+          <li>
+          <div class="row center">
+            <div class="col s6 right-align">UTMS:</div>
+            <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['stacionet_baze']['umts'] }}</u></div>
+          </div>
+          </li>
+          <li>
+          <div class="row center">
+            <div class="col s6 right-align">LTE:</div>
+            <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['stacionet_baze']['lte'] }}</u></div>
+          </div>
+          </li>
+          <li>
+          <div class="row center">
+            <div class="col s6 right-align">Komente:</div>
+            <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['elemente_rrjeti']['stacionet_baze']['komente'] }}</u></div>
+          </div>
+          <!-- ........................................................................... -->
+          <div class="row center">
+            <div class="col s12 center-align"><b>Kapaciteti</b></div>
+            <div class="col s12 center-align">Kapaciteti total në rrjetin tuaj </div>
+          </div>
+          <li>
+          <div class="row center">
+            <div class="col s6 right-align">GSM:</div>
+            <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['kapaciteti']['kapaciteti_total_ne_rrjet']['gsm'] }}</u></div>
+          </div>
+          </li>
+          <li>
+          <div class="row center">
+            <div class="col s6 right-align">UTMS:</div>
+            <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['kapaciteti']['kapaciteti_total_ne_rrjet']['umts'] }}</u></div>
+          </div>
+          </li>
+          <li>
+          <div class="row center">
+            <div class="col s6 right-align">LTE:</div>
+            <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['kapaciteti']['kapaciteti_total_ne_rrjet']['lte'] }}</u></div>
+          </div>
+          </li>
+          <li>
+          <div class="row center">
+            <div class="col s6 right-align">Komente:</div>
+            <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['infrastruktura']['kapaciteti']['kapaciteti_total_ne_rrjet']['komente'] }}</u></div>
+          </div>
+      </ul>
+    </span>
+  </div>
+</li>
+<!-- ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ -->
+<li>
+      <div class="collapsible-header"><i class="material-icons">perm_identity</i>Përdoruesit dhe ndarja e tyre</div>
+      <div class="collapsible-body">
+        <span>
+              <ul>
+              <div class="row center">
+                <div class="col s12 center-align"><b>Totali i përdoruesve individual me parapagim dhe kontratë</b></div>
+                <div class="col s12 center-align">Përdoruesit me parapagim (Prepaid)</div>
+              </div>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">Numri i perdorusve: :</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['perdoruesit_dhe_ndarja']['totali_perdoruesve_aktiv']['sherbimet_zeri_pako_interneti']['parapagim_dhe_kontrate']['parapagim']['numri_perdoruesve'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">Numri i perdorusve: :</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['perdoruesit_dhe_ndarja']['totali_perdoruesve_aktiv']['sherbimet_zeri_pako_interneti']['parapagim_dhe_kontrate']['parapagim']['te_hyrat_000s'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <li>
+                <div class="row center">
+                   <div class="col s6 right-align">Komente: :</div>
+                    <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['perdoruesit_dhe_ndarja']['totali_perdoruesve_aktiv']['sherbimet_zeri_pako_interneti']['parapagim_dhe_kontrate']['parapagim']['komente'] }}</u></div>
+                </div>
+              </li>
+          <div class="col s12 center-align">Përdoruesit me kontrate (Postpaid)</div>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">Numri i perdorusve: :</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['perdoruesit_dhe_ndarja']['totali_perdoruesve_aktiv']['sherbimet_zeri_pako_interneti']['parapagim_dhe_kontrate']['kontrate']['numri_perdoruesve'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <div class="row center">
+                <div class="col s6 right-align">Numri i perdorusve: :</div>
+                <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['perdoruesit_dhe_ndarja']['totali_perdoruesve_aktiv']['sherbimet_zeri_pako_interneti']['parapagim_dhe_kontrate']['kontrate']['te_hyrat_000s'] }}</u></div>
+              </div>
+              </li>
+              <li>
+              <li>
+                <div class="row center">
+                   <div class="col s6 right-align">Komente: :</div>
+                    <div class="col s6 left-align"><u>{{ report['pyetsori_tel_mobile']['perdoruesit_dhe_ndarja']['totali_perdoruesve_aktiv']['sherbimet_zeri_pako_interneti']['parapagim_dhe_kontrate']['kontrate']['komente'] }}</u></div>
+                </div>
+              </li>
 
+      </ul>
+    </span>
+  </div>
+</li>
+<!-- ------------------ -->
 
-
-  </ul>
-
-
+<!-- ---------- e fundit e fundit- -->
+</ul>
 </div>
 {% endblock form %}

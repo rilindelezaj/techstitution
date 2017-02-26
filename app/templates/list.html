@@ -1,28 +1,55 @@
 {% extends 'layout.html'%}
-{% block content %}
-<script type="text/javascript">
+{% block form %}
+<!-- <script type="text/javascript">
 $(document).ready(function(){
   $('.remove').click(function(event){
     event.preventDefault();
     var url = this.href;
+    var id = this.id;
+    $('#'+id).parent().parent().remove();
     $.post(url);
   });
 });
+</script> -->
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('.remove').click(function(event){
+            event.preventDefault();
+            var url = this.href;
+            var id = this.id;
+            $.post(url, function(data){
+                if(data.removed == true){
+                    $('#'+id).parent().parent().remove();
+                }
+
+            }).fail(function(){
+                alert("Something wrong happened");
+            });;
+        });
+    });
 </script>
+<div class="container">
+<div class="col s12">
 <table>
         <thead>
           <tr><th>Emri i kompanise</th>
           <th>Numri i regjistrimit</th>
-          <th>Actions</th></tr>
+          <th>Shiko</th>
+          <th>Fshi</th>
+        </tr>
         </thead>
         <tbody>
           {% for rekordi in rekordet %}
           <tr>
-            <td>{{ rekordi ['nderrmarja']['emri']}}</td>
-            <td>{{ rekordi ['nderrmarja']['numri_regjistrimi']}}</td>
-            <td><a class="remove" href="{{url_for('main.remove',remove_id=rekordi._id)}}">Delete</a> | <a href="{{url_for('main.raporti',report_id=rekordi._id)}}">View</a></td>
+            <td>{{ rekordi ['pyetsori_tel_mobile']['kompania']['emri_ndermarrjes']}}</td>
+            <td>{{ rekordi ['pyetsori_tel_mobile']['kompania']['nr_regjistrimit']}}</td>
+            <td><a href="{{url_for('main.raporti',report_id=rekordi._id)}}">Shiko</a></td>
+            <td><a class="remove" id="{{ rekordi._id }}" href="{{ url_for('main.remove' , remove_id=rekordi._id)}}">Fshi</a></td>
           </tr>
           {% endfor %}
         </tbody>
 </table>
+</div>
+</div>
 {% endblock %}
